@@ -1,7 +1,5 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s:
-            return 0
         l, r = 0, 0
         seen, size = set(), 0
         while r < len(s):
