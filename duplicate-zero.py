@@ -3,12 +3,10 @@ class Solution:
         """
         Do not return anything, modify arr in-place instead.
         """
-        temp = []
-        l, r = 0, 0
-        while l < len(arr) and len(temp) < len(arr):
-            temp.append(arr[l])
+        l = 0
+        while l < len(arr):
             if arr[l] == 0:
-                temp.append(0)
+                arr.insert(l + 1, 0)
+                arr.pop()
+                l +=1
             l +=1
-        for i in range(len(arr)):
-            arr[i] = temp[i]
